@@ -1,0 +1,64 @@
+<div class="row bg-dark">
+  <div class="col text-center">
+  <br>
+  <img width="80px" src="https://lh3.googleusercontent.com/proxy/x3F5oq9oxOhkrlKxSfK8XGvXYb41AFY5l1e8mwrKGqv13QDdDddpRZj_RSWsQgBhNe2lA_i1hGTKaK1jz0QM_4uilUtrsu_nw-cC9yaijqEpjxFJ0fq7DXuj6zsnZKL6V-Nuz9koCvhTI1WuVQ" alt="">
+  
+  </div>
+  <div class="col">
+    <br><br>
+    <h1 class= "text-center text-white">{{title}}</h1>
+    <hr class="bg-white">    
+  </div>
+  <div class="col text-center">
+    <br>
+    <img width="80px" src="https://cdn.worldvectorlogo.com/logos/angular-icon.svg" alt="">
+  </div>
+  <br><br>
+</div>
+
+
+
+
+
+
+<div class="row bg-dark">
+  
+  <div class="col small-screen" >
+    <br>
+    <p class="pl-5 text-center text-white">Do you want to add a new task ?</p>
+  </div>
+  <div class="col small-screen-second" style="margin-left: 10px;">
+    <br>
+    <input type="text" #newTodo  >
+    <button class="text-white button btn-danger " (click)="addTodo(newTodo.value); newTodo.value=''">Create Task</button>    
+  </div>
+  <br><br>
+</div>
+
+
+<div class="container">
+   <div class="row">
+    <div class="col">
+    
+   </div>
+    <div class="col-10  ">
+      <table class="table bg-white ">
+        <tr>
+         <th>Label</th>
+         
+         <th>Actions</th>
+        </tr>
+       <tr *ngFor="let todo of todos">
+        <td>{{todo.label}}</td>
+        
+         <td>
+           <button class="pl-2 text-white button btn-danger"(click)="deleteTodo(todo)"> Done </button>
+         </td>
+       </tr>
+       </table>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
+

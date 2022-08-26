@@ -1,0 +1,13 @@
+.ml-5, .mx-5 {
+    margin-left: 8.3rem!important;
+}
+@media (max-width: 640px) {
+.small-screen{
+    display:none;
+    }
+    .small-screen-second{
+    margin-left: 65px!important;
+    margin-bottom: 5px;
+    }
+
+}
